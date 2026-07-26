@@ -1,116 +1,172 @@
-# Astro Netlify Sanity Starter
+# 🚀 Astro Netlify Sanity Starter
 
-![Astro Netlify Sanity Starter](https://assets.stackbit.com/docs/astro-sanity-starter-thumb.jpg)
+Astro Netlify Sanity Starter is a modern full-stack starter template that combines **Astro**, **Sanity CMS**, and **Netlify** to build fast, scalable, and content-driven websites. The project includes visual editing, headless content management, and a streamlined development workflow for developers and content creators.
 
-[Live Demo](https://astro-sanity-starter-demo.netlify.app/)
+## ✨ Features
 
-Netlify Astro and Sanity minimal starter with [visual editing](https://docs.netlify.com/visual-editor/overview/).
+- ⚡ High-performance static site generation with Astro
+- 📝 Headless CMS powered by Sanity
+- 🎨 Netlify Visual Editor integration
+- 🔄 Real-time content editing and preview
+- 📱 Responsive and modern design
+- 🚀 Optimised deployment on Netlify
+- 🔐 Secure environment variable configuration
+- 🛠️ Developer-friendly project structure
 
-| Prerequisites                                                                |
-| :--------------------------------------------------------------------------- |
-| [Node.js](https://nodejs.org/) v20.+                                         |
-| (optional) [nvm](https://github.com/nvm-sh/nvm) for Node version management. |
+---
 
-## Getting Started
+## 🛠️ Tech Stack
 
-Create local project from this repo and run:
+- Astro
+- Sanity CMS
+- Netlify
+- JavaScript
+- Node.js
+- Stackbit Visual Editor
 
-```txt
+---
+
+## 📦 Prerequisites
+
+- Node.js v20+
+- npm
+- (Optional) nvm for Node version management
+- Sanity CLI
+- Stackbit CLI
+
+---
+
+## 🚀 Installation
+
+### Clone the Repository
+
+```bash
+git clone <repository-url>
+```
+
+### Install Dependencies
+
+```bash
 npm install
 ```
 
-### Sign Into Sanity
+### Login to Sanity
 
-If you are not already signed into Sanity via the CLI, install the CLI package and then run the login command.
-
-```txt
+```bash
 npm install -g @sanity/cli
 sanity login
 ```
 
-This will open a browser and walk you through the authentication process.
+### Create a Sanity Project
 
-### Import Content
-
-Once authenticated, you'll be able to create a Sanity project and import content.
-
-```txt
+```bash
 npm run create-project
 ```
 
-_Note: You may want to sign into Sanity in the browser and rename your project._
+### Import Sample Content
 
-Once the project exists and you've set the environment variables, you can import the content.
-
-```txt
-npm run import {projectId}
+```bash
+npm run import <projectId>
 ```
 
-Replace `{projectId}` with the project ID output from the previous command.
+### Configure Environment Variables
 
-### Store Sanity Values
+Create a `.env` file in the project root.
 
-Sign into Sanity to create an editor token, navigate to the following address (replace the `SANITY_PROJECT_ID` with your project ID) `https://www.sanity.io/manage/personal/project/SANITY_PROJECT_ID/api#tokens`. Then create `.env` file in you repo, copy & paste the following environment variables into the file and set their values.
-
-```txt
-SANITY_PROJECT_ID="..."
-SANITY_DATASET="..."
-SANITY_TOKEN="..."
+```env
+SANITY_PROJECT_ID=your_project_id
+SANITY_DATASET=production
+SANITY_TOKEN=your_token
 ```
 
-### Run Sanity Studio
+---
 
-Sanity Studio code exists for this project in the `studio` directory. First, install the dependencies in this directory.
+## ▶️ Run the Development Server
 
-```txt
-cd studio
-npm install
-```
-
-Then create a `.env` file in the `studio` directory with the following environment variables and set their values:
-
-```txt
-SANITY_STUDIO_PROJECT_ID="..."
-SANITY_STUDIO_DATASET="..."
-```
-
-Then run the studio locally.
-
-```txt
-sanity dev
-```
-
-If you want to see the content, you can open your browser and navigate to localhost:3333.
-
-### Start Development Server
-
-Then you can run the Astro.js development server in root directory:
-
-```txt
+```bash
 npm run dev
 ```
 
-Install Netlify Visual Editor CLI:
+---
 
-```txt
+## 📝 Run Sanity Studio
+
+```bash
+cd studio
+npm install
+sanity dev
+```
+
+Open:
+
+```
+http://localhost:3333
+```
+
+---
+
+## 🎨 Enable Netlify Visual Editor
+
+Install the Stackbit CLI:
+
+```bash
 npm install -g @stackbit/cli
 ```
 
-And the Stackbit development server.
+Start the editor:
 
-```txt
+```bash
 stackbit dev
 ```
 
-This outputs your own Netlify Visual Editor URL. Open this, register or sign in, and you will be directed to Netlify Visual Editor for your new project.
+---
 
-## Next Steps
+## 📂 Project Structure
 
-Here are a few suggestions on what to do next if you're new to Netlify Visual Editor:
+```
+/
+├── src/
+├── public/
+├── studio/
+├── astro.config.mjs
+├── package.json
+└── README.md
+```
 
-- Learn [how Netlify Visual Editor works](https://docs.netlify.com/visual-editor/concepts/how-visual-editor-works/)
-- Check [Netlify Visual Editor reference documentation](https://visual-editor-reference.netlify.com/)
+---
 
-## Support
+## 🎯 Use Cases
 
-If you get stuck along the way, get help in our [support forums](https://answers.netlify.com/).
+- Business websites
+- Portfolio websites
+- Blogs
+- Documentation sites
+- Marketing landing pages
+- Headless CMS projects
+- JAMstack applications
+
+---
+
+## 🔮 Future Improvements
+
+- Authentication support
+- Multi-language content
+- SEO enhancements
+- Analytics integration
+- Dark mode
+- Image optimisation
+- Content scheduling
+
+---
+
+## 👨‍💻 Author
+
+**Evans Emmanuel Davou**
+
+AI Engineer • Cybersecurity Student • Full-Stack Developer
+
+---
+
+## 📄 License
+
+This project is intended for educational, personal, and commercial web development purposes.
